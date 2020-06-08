@@ -18,6 +18,7 @@ public class Checklist extends MainModel {
     private String title;
     private String item;
     private Integer position;
+    private Integer checked;
 
     public Checklist(){
 
@@ -63,4 +64,11 @@ public class Checklist extends MainModel {
         this.position = position;
     }
 
+    public Integer getChecked() {
+        return checked;
+    }
+
+    public void setChecked(Integer checked) {
+        this.checked = checked;
+    }
 }
