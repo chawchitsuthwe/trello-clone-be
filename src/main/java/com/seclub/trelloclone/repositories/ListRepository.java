@@ -10,4 +10,6 @@ public interface ListRepository extends JpaRepository<List, Long>{
 
     public java.util.List<List> findByTitleContaining(String searchTerm);
 
+    public java.util.List<List> findByOrderByPositionAsc();
+
 }

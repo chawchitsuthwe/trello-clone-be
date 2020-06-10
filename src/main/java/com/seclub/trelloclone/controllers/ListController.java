@@ -31,6 +31,11 @@ public class ListController {
         return listRepository.findByTitleContaining(searchTerm);
     }
 
+    @GetMapping("positionAsc")
+    public java.util.List<List> getListByPositionAsc(){
+        return listRepository.findByOrderByPositionAsc();
+    }
+
     @PostMapping()
     public List save(@RequestBody List list){
         return listRepository.saveAndFlush(list);

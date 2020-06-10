@@ -62,5 +62,4 @@ public class List extends MainModel {
         this.cards = cards;
     }
 
-
 }
