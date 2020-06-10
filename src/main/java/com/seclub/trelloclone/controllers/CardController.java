@@ -42,6 +42,11 @@ public class CardController {
         return cardRepository.getOne(id);
     }
 
+    @GetMapping("ListIdAscPositionAsc")
+    public List<Card> getCardByListIdAscPositionAsc(){
+        return cardRepository.queryByListIdAscPositionAsc();
+    }
+
     @PostMapping()
     public Card save(@RequestBody Card card){
         return cardRepository.saveAndFlush(card);
