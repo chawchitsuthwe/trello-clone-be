@@ -1,6 +1,5 @@
 package com.seclub.trelloclone.controllers;
 
-import com.seclub.trelloclone.models.Card;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +16,15 @@ public class ListController {
     ListRepository listRepository;
 
     @GetMapping
+    @ResponseBody
     public java.util.List<List> getAll() {
         return listRepository.findAll();
+    }
+
+
+    @GetMapping("{id}")
+    public List getById(@PathVariable Long id) {
+        return listRepository.getOne(id);
     }
 
     @GetMapping("position/{position}")
